@@ -11,6 +11,7 @@ sudo adduser nexus
 sudo chown -R nexus:nexus /app/nexus
 sudo chown -R nexus:nexus /app/sonatype-work
 sudo echo "run_as_user="nexus"" > /app/nexus/bin/nexus.rc
+vi /etc/systemd/system/nexus.service
 sudo tee /etc/systemd/system/nexus.service > /dev/null << EOL
 [Unit]
 Description=nexus service
